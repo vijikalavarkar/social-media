@@ -2,9 +2,9 @@ FROM node:lts-alpine
 
 WORKDIR /app
 
-COPY package*.json ./  
+COPY package*.json /app  
 
-RUN npm install --omit=dev  
+RUN npm install 
 
 COPY . .  
 
