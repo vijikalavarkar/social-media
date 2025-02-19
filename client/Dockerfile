@@ -1,13 +1,13 @@
-FROM node:latest
+FROM node:lts-alpine  
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package*.json ./  
 
-RUN npm i --force
+RUN npm install --omit=dev  
 
-COPY . .
+COPY . .  
 
 EXPOSE 3000
 
-CMD ["npm","start"]
+CMD ["npm", "start"] 
